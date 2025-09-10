@@ -9,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // 📁 Paths
-const xlsmFilePath = path.resolve(__dirname, process.env.XLSM_PATH);
-const macroName = process.env.MACRO_NAME;
+const xlsmFilePath = path.resolve(__dirname, "250616 Daily Volume Report - Copy2.xlsm");
+const macroName = "refresh_All";
 const psScriptPath = path.resolve(__dirname, "run-macro.ps1");
 
 app.get("/api/refresh", (req, res) => {
@@ -53,3 +53,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server is listening at http://localhost:${PORT}`);
 });
+
